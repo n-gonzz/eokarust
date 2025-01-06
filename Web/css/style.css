@@ -1,0 +1,920 @@
+/*
+ * ============================================
+ *            COPYRIGHT FABITO.NET
+ * ============================================
+ * SUMMARY
+ * --------------------------------------------
+ * 1 - Additionals
+ * 2 - Basic Styles
+ * 3 - Buttons
+ * 4 - Navigation
+ * 5 - Hero
+ * 6 - Servers
+ * 7 - Servers Modal
+ * 8 - Shop
+ * 9 - Rules
+ * 10 - Staff
+ * 11 - Footer
+ * 12 - Socials
+ * 13 - FAQ
+ * 14 - Statistics
+ * --------------------------------------------
+ */
+
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+
+
+body{
+  font-family: "Roboto Condensed", Arial, sans-serif;
+    color: rgb(100, 197, 194);
+}
+
+canvas{
+  display:block;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  max-width: 1920px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 1080px;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: translucent;
+  top: 0;
+  z-index: -1;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-top: -1px;
+}
+
+main {
+    position: relative;
+}
+
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #79A70A;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #79A70A;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+}
+
+/*
+ * ---------------------------------------------
+ * 1 - Additionals
+ * ---------------------------------------------
+ */
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/Roboto-Condensed-Light.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Roboto-Condensed-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Roboto-Condensed-Bold.woff2) format('woff2');
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(134, 134, 134);
+}
+
+::-moz-selection {
+    color: rgb(173, 168, 162);
+    background: rgb(20, 24, 20);
+}
+
+::selection {
+    color: rgb(173, 168, 162);
+    background: rgb(41, 49, 41);
+}
+
+
+/*
+ * ---------------------------------------------
+ * 2 - Basic Styles
+ * ---------------------------------------------
+ */
+
+
+
+
+/*
+ * ---------------------------------------------
+ * 3 - Buttons
+ * ---------------------------------------------
+ */
+
+.btn {
+    border-radius: 0;
+    border: 0;
+    padding: 8px 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn.btn-success {
+    background: rgb(61, 75, 39);
+    color: rgb(166, 205, 99);
+}
+
+.btn.btn-success:hover {
+    background: rgb(88, 108, 57);
+}
+
+.btn.btn-success:active {
+    background: rgb(61, 75, 39);
+}
+
+.btn.btn-primary {
+    background: rgb(29, 66, 95);
+    color: rgb(72, 154, 212);
+}
+
+.btn.btn-primary:hover {
+    background: rgb(39, 85, 121);
+}
+
+.btn.btn-primary:active {
+    background: rgb(29, 66, 95);
+}
+
+.btn.btn-secondary {
+    background: rgb(89, 85, 82);
+    color: rgb(204, 195, 190);
+}
+
+.btn.btn-secondary:hover {
+    background: rgb(111, 107, 103);
+}
+
+.btn.btn-secondary:active {
+    background: rgb(89, 85, 82);
+}
+
+.btn.btn-danger {
+    background: rgb(150, 47, 32);
+    color: rgb(199, 152, 151);
+}
+
+.btn.btn-danger:hover {
+    background: rgb(172, 56, 39);
+}
+
+.btn.btn-danger:active {
+    background: rgb(150, 47, 32);
+}
+
+.btn.btn-discord {
+    background: rgb(114, 137, 218);
+    color: rgb(255, 255, 255);
+}
+
+.btn.btn-discord:hover {
+    background: rgb(132, 156, 238);
+}
+
+.btn.btn-discord:active {
+    background: rgb(114, 137, 218);
+}
+
+.btn.btn-discord svg {
+    height: 24px;
+    margin-top: -1px;
+}
+
+
+/*
+ * ---------------------------------------------
+ * 4 - Navigation
+ * ---------------------------------------------
+ */
+
+.navbar-rust {
+    margin-top: 50px;
+    background-color: rgb(28, 28, 26) !important;
+    border-radius: 0 !important;
+    margin-bottom: 50px;
+}
+
+.navbar-rust .navbar-nav .nav-link {
+    color: rgb(220, 211, 202, 0.8);
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-rust .navbar-nav .nav-link:hover {
+    color: rgb(220, 211, 202);
+}
+
+.navbar-rust .navbar-brand {
+    color: rgb(0, 145, 142);
+    margin-left: 15px;
+}
+
+.navbar-rust .navbar-logo-container {
+    width: 75px;
+}
+
+.navbar-rust .nav-logo {
+    position: absolute;
+    height: 75px;
+    margin-top: -38px;
+}
+
+.navbar-rust .navbar-toggler {
+    border-radius: 0;
+}
+
+.navbar-rust .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-rust .navbar-brand {
+        transform: translateX(-50%);
+        left: 50%;
+        top: 40px;
+        position: absolute;
+    }
+
+    .navbar-rust .nav-logo {
+        height: 42px;
+    }
+}
+
+
+/*
+ * ---------------------------------------------
+ * 5 - Hero
+ * ---------------------------------------------
+ */
+
+.hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.hero h1 {
+    text-align: center;
+    color: rgb(0, 145, 142);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.hero p {
+    text-align: center;
+    color: rgb(100, 197, 194);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hero .server-brand {
+    color: rgb(255, 153, 0);
+}
+
+
+/*
+ * ---------------------------------------------
+ * 6 - Servers
+ * ---------------------------------------------
+ */
+
+.servers .server {
+    border: 6px solid rgb(31, 32, 26);
+    background: rgb(31, 32, 26);
+    margin-top: 25px;
+    position: relative;
+}
+
+.servers .server .server-container {
+    padding: 10px;
+    text-align: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+.servers .server .server-container .server-name {
+    color: rgb(198, 192, 186);
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.servers .server .server-container .server-description {
+    color: rgb(142, 143, 138);
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.servers .server .server-container .server-players {
+    color: rgb(142, 143, 138);
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.servers .server .server-tags {
+    margin-bottom: 5px;
+}
+
+.servers .server .server-tags .server-tag {
+    background: #26435E;
+    color: #C2C5CC;
+    padding: 5px 8px;
+    font-size: 15px;
+}
+
+.servers .server .server-image-container {
+    position: relative;
+}
+
+.servers .server .server-image-container .server-image-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(31,32,26,0) 35%, rgba(31,32,26,1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.servers .server .progress {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.servers .server .progress .progress-bar.bg-rust {
+    background-color: rgb(166, 205, 99);
+}
+
+.servers .server .server-image-container {
+    position: relative;
+}
+
+.servers .server .server-offline {
+    background: rgb(150, 47, 32);
+    color: rgb(199, 152, 151);
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.servers .server .server-offline .icon {
+    margin-top: -2px;
+}
+
+
+/*
+ * ---------------------------------------------
+ * 7 - Servers Modal
+ * ---------------------------------------------
+ */
+
+.modal.modal-rust .modal-content {
+    border: 8px solid rgb(31, 32, 26);
+    border-radius: 0;
+    background: rgb(31, 32, 26);
+    color: rgb(108, 110, 105);
+}
+
+.modal.modal-rust .modal-body {
+    padding: 0;
+}
+
+.modal.modal-rust .modal-footer {
+    border-top: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.modal.modal-rust .modal-footer .btn {
+    margin: 4px 2px;
+}
+
+.modal.modal-rust .server-image-modal-container .server-image-modal-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(31,32,26,0) 35%, rgba(31,32,26,1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal.modal-rust .server-image-modal-container {
+    position: relative;
+}
+
+.modal.modal-rust .server-modal-details {
+    margin-top: -60px;
+    z-index: 2;
+    position: relative;
+}
+
+.modal.modal-rust .server-modal-details .server-name {
+    color: rgb(198, 192, 186);
+    font-weight: bold;
+    font-size: 28px;
+    display: block;
+    text-align: center;
+}
+
+.modal.modal-rust .server-modal-details .server-description {
+    color: rgb(173, 168, 162);
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-top: -8px;
+}
+
+.modal.modal-rust .server-modal-details .server-rules {
+    margin-top: 10px;
+    color: rgb(105, 107, 102);
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    line-height: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal.modal-rust .server-modal-details .server-rules a {
+    color: rgb(164, 167, 160);
+    text-decoration: none;
+}
+
+.modal.modal-rust .server-modal-details .server-rules a:hover {
+    color: rgb(187, 191, 185);
+}
+
+
+/*
+ * ---------------------------------------------
+ * 8 - Shop
+ * ---------------------------------------------
+ */
+
+.store {
+    margin-top: 200px;
+}
+
+.store .store-image-container {
+    position: relative;
+}
+
+.store .store-image-container .store-image-overlay {
+    background: radial-gradient(at center, rgba(0,0,0,0) 35%, rgba(20,24,20,1) 70%) rgba(20, 24, 20, 0.8);
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    top: 0;
+    left: 0;
+}
+
+.store .store-heading {
+    color: rgb(0, 145, 142);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.store .store-message {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.store .btn-store {
+    padding: 18px 24px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.store .btn-store .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.store .store-message ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.store .store-message ul li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    margin-top: 12px;
+}
+
+.store .store-message ul li::before {
+    content: "â–  ";
+    color: rgb(100, 205, 99);
+    font-size: 32px;
+    line-height: 22px;
+}
+
+@media only screen and (max-width: 576px) {
+    .store {
+        margin-top: 80px;
+    }
+
+    .store .store-heading {
+        margin-bottom: 40px;
+    }
+}
+
+
+/*
+ * ---------------------------------------------
+ * 9 - Rules
+ * ---------------------------------------------
+ */
+
+.rules {
+    margin-top: 80px;
+}
+
+.rules .rules-heading {
+    color: rgb(220, 211, 202);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.rules .accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.rules .accordion-header {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.rules .accordion-header .accordion-button {
+    background: transparent;
+    color: rgb(220, 211, 202, 0.8);
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 20px 26px;
+}
+
+.rules .accordion-header .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dcd3ca'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.rules .accordion-header .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a6cd63'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+
+.rules .accordion-header .accordion-button .icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-top: -2px;
+    color: rgb(166, 205, 99);
+}
+
+.rules .accordion-body {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 28px;
+}
+
+@media only screen and (max-width: 576px) {
+    .rules .accordion-header .accordion-button {
+        font-size: 22px;
+    }
+
+    .rules .accordion-header .accordion-button .icon {
+        height: 26px;
+        width: 26px;
+    }
+
+    .rules .accordion-body {
+        font-size: 18px;
+    }
+}
+
+
+/*
+ * ---------------------------------------------
+ * 10 - Staff
+ * ---------------------------------------------
+ */
+
+.staff {
+    margin-top: 80px;
+}
+
+.staff .staff-heading {
+    color: rgb(220, 211, 202);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.staff .member {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.staff .member img {
+    width: 180px;
+    height: 180px;
+}
+
+.staff .member .member-description {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    width: 180px;
+}
+
+.staff .member .member-description .member-name {
+    color: rgb(220, 211, 202);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.staff .member .member-description .member-rank {
+    color: rgb(166, 205, 99);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*
+ * ---------------------------------------------
+ * 11 - Footer
+ * ---------------------------------------------
+ */
+
+footer {
+    text-align: center;
+    margin-top: 140px;
+    background: rgb(17, 17, 17);
+    padding: 40px 20px;
+    font-weight: 300;
+}
+
+footer img {
+    height: 75px;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+footer .copyright {
+    font-weight: 400;
+}
+
+
+/*
+ * ---------------------------------------------
+ * 12 - Socials
+ * ---------------------------------------------
+ */
+
+.socials {
+    margin-right: 10px;
+}
+
+.socials .social-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.socials a {
+    color: rgb(142, 145, 142);
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: rgb(166, 205, 99);
+}
+
+.socials a:active {
+    color: rgb(193, 193, 193);
+}
+
+
+/*
+ * ---------------------------------------------
+ * 13 - FAQ
+ * ---------------------------------------------
+ */
+
+.faq {
+    margin-top: 80px;
+}
+
+.faq .faq-heading {
+    color: rgb(220, 211, 202);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.faq .accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.faq .accordion-header {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.faq .accordion-header .accordion-button {
+    background: transparent;
+    color: rgb(220, 211, 202);
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 20px 26px;
+}
+
+.faq .accordion-header .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dcd3ca'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq .accordion-header .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a6cd63'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+
+.faq .accordion-header .accordion-button .icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-top: -2px;
+    color: rgb(166, 205, 99);
+}
+
+.faq .accordion-body {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 28px;
+}
+
+@media only screen and (max-width: 576px) {
+    .faq .accordion-header .accordion-button {
+        font-size: 22px;
+    }
+
+    .faq .accordion-header .accordion-button .icon {
+        height: 26px;
+        width: 26px;
+    }
+
+    .faq .accordion-body {
+        font-size: 18px;
+    }
+}
+
+
+/*
+ * ---------------------------------------------
+ * 14 - Statistics
+ * ---------------------------------------------
+ */
+
+.rust-stats-container .stats-heading {
+    color: rgb(220, 211, 202);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+a {
+  color: orange;
+}
